@@ -253,7 +253,7 @@ This model is maintained by **[Mycos Technologies, Co., Ltd.](https://www.mycost
 
 - 🌐 Product: [rulesentry.io](https://www.rulesentry.io)
 - 🤗 HuggingFace org: [rulesentry-io](https://huggingface.co/rulesentry-io)
-- 🛠️ Evaluation tooling: [github.com/mycostech/ettin-pii-onnx](https://github.com/mycostech/ettin-pii-onnx)
+- 🛠️ Evaluation tooling: [github.com/rulesentry/ettin-pii-onnx](https://github.com/rulesentry/ettin-pii-onnx)
 
 ---
 
