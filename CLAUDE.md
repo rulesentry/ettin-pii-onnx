@@ -7,13 +7,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Two Python scripts:
 
 - **`evaluate_onnx.py`** — fidelity evaluation harness that benchmarks the ONNX export against its PyTorch parent on the `nvidia/Nemotron-PII` test split. Used to verify the published ONNX artifact matches the PyTorch source.
-- **`gpu_smoke.py`** — post-publish verification that the published artifact loads and runs on GPU (requires `optimum[onnxruntime-gpu]`). Three guard-asserts catch the common failure modes: CUDA provider not registered, model loaded but silently fell back to CPU, inference produces wrong output. Called manually after publishing per `publish.md` Step 8.
+- **`gpu_smoke.py`** — post-publish verification that the published artifact loads and runs on GPU (requires `optimum[onnxruntime-gpu]`). Three guard-asserts catch the common failure modes: CUDA provider not registered, model loaded but silently fell back to CPU, inference produces wrong output. Called manually after publishing.
 
 Supporting docs:
 
 - **`README.md`** — GitHub-facing README for the repository.
 - **`MODEL_CARD.md`** — HuggingFace model-card prose. Staged as `README.md` inside `./onnx_fp32/` at publish time (HF requires the filename `README.md` to render as the model card).
-- **`publish.md`** — repeatable publishing walkthrough (login → stage → upload → verify on web → smoke-test CPU → smoke-test GPU).
 
 For ModernBERT-family architecture details (RoPE / GeGLU / sliding-window / no-bias settings), reference the upstream Ettin paper (arxiv.org/abs/2507.11412) or clone the JHU-CLSP training repo (`github.com/JHU-CLSP/ettin-encoder-vs-decoder`) — its `pretraining/configs/standard/*/encoder_*.yaml` files contain the exact hyperparameters.
 
@@ -21,7 +20,7 @@ There is no application code, no tests, no CI.
 
 ## Local artifacts (not in HF Hub)
 
-- **`./onnx_fp32/`** — fp32 ONNX export of `kalyan-ks/ettin-68m-nemotron-pii`. Source of the published artifact at `rulesentry-io/ettin-68m-nemotron-pii-onnx`. Contains `model.onnx` (gitignored — regenerate via the `optimum-cli` command in Commands below), tokenizer files (with `model_input_names` patched to `["input_ids", "attention_mask"]`), and `config.json`. Re-uploads via `publish.md`.
+- **`./onnx_fp32/`** — fp32 ONNX export of `kalyan-ks/ettin-68m-nemotron-pii`. Source of the published artifact at `rulesentry-io/ettin-68m-nemotron-pii-onnx`. Contains `model.onnx` (gitignored — regenerate via the `optimum-cli` command in Commands below), tokenizer files (with `model_input_names` patched to `["input_ids", "attention_mask"]`), and `config.json`.
 
 ## Commands
 

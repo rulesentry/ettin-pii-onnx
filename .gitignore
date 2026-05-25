@@ -4,3 +4,6 @@ __pycache__/
 
 # Regenerable via `optimum-cli export onnx` — see CLAUDE.md > Commands.
 onnx_fp32/model.onnx
+
+# Internal publishing runbook — kept locally, excluded from the public repo.
+publish.md

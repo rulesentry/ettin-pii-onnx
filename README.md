@@ -11,7 +11,6 @@ The published ONNX artifact lives at [`rulesentry-io/ettin-68m-nemotron-pii-onnx
 | [`evaluate_onnx.py`](./evaluate_onnx.py) | Side-by-side evaluation harness — runs the ONNX export and the PyTorch parent on the Nemotron-PII test split and reports per-entity F1, precision, recall, throughput, and per-entity deltas. |
 | [`gpu_smoke.py`](./gpu_smoke.py) | Post-publish verification that the HF artifact loads and runs on GPU. Three guard-asserts catch the common failure modes. |
 | [`MODEL_CARD.md`](./MODEL_CARD.md) | The HuggingFace model card for the published artifact (staged into `onnx_fp32/README.md` at publish time). |
-| [`publish.md`](./publish.md) | Step-by-step walkthrough for publishing the local ONNX export to HuggingFace. |
 | [`onnx_fp32/`](./onnx_fp32) | Source artifact for the publish: `config.json` plus tokenizer files with hand-curated patches. `model.onnx` is gitignored — regenerate via `optimum-cli`. |
 | [`CLAUDE.md`](./CLAUDE.md) | Architectural notes and known sharp edges in the harness. |
 
