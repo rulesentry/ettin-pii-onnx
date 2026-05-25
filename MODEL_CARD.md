@@ -27,7 +27,7 @@ metrics:
 
 **fp32 ONNX export of [`kalyan-ks/ettin-68m-nemotron-pii`](https://huggingface.co/kalyan-ks/ettin-68m-nemotron-pii) — bit-for-bit faithful to the PyTorch parent | 68M Parameters | 55 PII Entity Types**
 
-This is an ONNX export of the `ettin-68m-nemotron-pii` model, produced by [Mycos Technologies, Co., Ltd.](https://www.mycostech.com) for use in [RuleSentry](https://www.rulesentry.io) and other high-throughput, CPU-bound PII detection pipelines. The underlying model detects 55 PII entity types across healthcare, finance, legal, and cybersecurity domains.
+This is an ONNX export of the `ettin-68m-nemotron-pii` model, onnx export produced by [Mycos Technologies, Co., Ltd.](https://www.mycostech.com) for use in [RuleSentry](https://www.rulesentry.io) and other high-throughput, CPU-bound PII detection pipelines. The underlying model detects 55 PII entity types across healthcare, finance, legal, and cybersecurity domains.
 
 ---
 
